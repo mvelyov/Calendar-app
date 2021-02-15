@@ -1,0 +1,20 @@
+<div *ngIf="day" class="day-number">
+  <div class="day-name">
+    {{ day.nameShort }}
+  </div>
+  <span
+    [ngClass]="{
+      today: day.isToday
+    }"
+    class="day-number"
+  >
+    {{ day.number }}
+  </span>
+</div>
+
+<div *ngIf="day && day.meetingNames && day.meetingNames.length > 0">
+  <app-calendar-meeting
+    *ngFor="let meeting of day.meetingNames"
+    [meeting]="meeting"
+  ></app-calendar-meeting>
+</div>

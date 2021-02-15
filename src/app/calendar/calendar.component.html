@@ -1,0 +1,37 @@
+<app-calendar-modal #modal [day]="day"></app-calendar-modal>
+
+<div class="month-container">
+  <div>
+    <button (click)="onPreviousMonth()">Previous</button>
+  </div>
+
+  <app-calendar-month-year
+    [month]="currentMonth"
+    [year]="currentYear"
+  ></app-calendar-month-year
+  >
+
+  <div>
+    <button (click)="onNextMonth()">Next</button>
+  </div>
+</div>
+
+<div class="day-name-container">
+  <div *ngFor="let dayName of dayNames" class="name">
+    {{ dayName }}
+  </div>
+</div>
+
+<div class="calendar-container">
+  <div
+    *ngFor="let day of days"
+    class="day"
+    [ngClass]="{
+      weekend: day.isWeekend,
+      active: day.isActive
+    }"
+    (click)="onSelectDay(day)"
+  >
+    <app-calendar-day [day]="day"></app-calendar-day>
+  </div>
+</div>

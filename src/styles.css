@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --mainBlueColor: #2196f3;
+  --mainBorderColor: #dadce0;
+  --modalBackgroundColor: #fefefe;
+}
+
+body {
+  margin: 0;
+}
+
+.app-container {
+  display: grid;
+}
+
+.month-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  height: 4vh;
+  align-items: center;
+  text-align: center;
+}
+
+.day-name-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 3vh;
+  text-align: center;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 90vh;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.modal-content {
+  background-color: var(--modalBackgroundColor);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--mainBorderColor);
+  width: 40vw;
+}
+
+.day {
+  border-bottom: 1px solid var(--mainBorderColor);
+  border-right: 1px solid var(--mainBorderColor);
+  text-align: center;
+  padding-top: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  height: 18vh;
+  overflow: hidden;
+}
+
+.day-name {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .month-container {
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  .calendar-container {
+    display: block;
+  }
+
+  .day-name-container {
+    display: none;
+  }
+
+  .modal-content {
+    width: 90vw;
+  }
+
+  .day {
+    height: 13vh;
+  }
+
+  .day-name {
+    display: block;
+  }
+}

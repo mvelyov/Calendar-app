@@ -1,0 +1,12 @@
+.meeting {
+  text-align: left;
+  padding: 5px;
+}
+
+.icon {
+  height: 6px;
+  width: 6px;
+  background-color: var(--mainBlueColor);
+  border-radius: 50%;
+  display: inline-block;
+}

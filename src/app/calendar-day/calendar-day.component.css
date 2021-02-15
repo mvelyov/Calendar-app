@@ -1,0 +1,17 @@
+span.day-number {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+}
+
+span.day-number.today {
+  background-color: var(--mainBlueColor);
+  color: white;
+}
+
+div.day-number {
+  margin-bottom: 10px;
+}

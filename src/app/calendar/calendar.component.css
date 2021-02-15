@@ -1,0 +1,7 @@
+.active {
+  border: 1px solid var(--mainBlueColor);
+}
+
+.weekend {
+  color: var(--mainBlueColor);
+}

@@ -1,0 +1,9 @@
+<div #modal class="modal-container">
+  <div *ngIf="day" class="modal-content">
+    <app-calendar-meeting
+      *ngFor="let meeting of day.meetingNames"
+      [meeting]="meeting"
+    ></app-calendar-meeting>
+    <button (click)="close()">Close</button>
+  </div>
+</div>
